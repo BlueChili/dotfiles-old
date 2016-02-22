@@ -1,0 +1,13 @@
+[user]
+	name = BlueChili
+	email = cmdr.chili@gmail.com
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[push]
+	default = simple
+[alias]
+	lol = log --pretty=format:'%C(auto) %h%d %C(yellow)\"%Creset%s%C(yellow)\"%Creset • %Cblue%ar' --graph
