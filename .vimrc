@@ -115,7 +115,7 @@ call vundle#end()            " required
 "filetype plugin on    " required
 syntax enable
 "
-":let g:gruvbox_italic=1
+:let g:gruvbox_italic=1
 :let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 " Brief help
