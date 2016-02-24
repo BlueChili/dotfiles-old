@@ -11,3 +11,4 @@
 	default = simple
 [alias]
 	lol = log --pretty=format:'%C(auto) %h%d %C(yellow)\"%Creset%s%C(yellow)\"%Creset • %Cblue%ar' --graph
+	st = status
