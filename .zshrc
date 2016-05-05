@@ -91,3 +91,4 @@ eval "$(rbenv init -)"
 export EDITOR="vim"
 #exec fortune -a /Users/BlueChili/.oh-my-zsh/plugins/chucknorris/fortunes | cowthink
 exec fortune | cowthink
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

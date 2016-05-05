@@ -31,8 +31,8 @@ no <left> <Nop>
 no <right> <Nop>
 ino <up> <Nop>
 ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
 vno <up> <Nop>
 vno <down> <Nop>
 vno <left> <Nop>
@@ -101,8 +101,9 @@ Plugin 'vim-stylus'
 " Syntax checker plugin syntastic works in conjunction with jshint
 Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'pangloss/vim-javascript'
-Plugin 'gavocanov/vim-js-indent'
+"Plugin 'pangloss/vim-javascript'
+Plugin 'isRuslan/vim-es6'
+"Plugin 'gavocanov/vim-js-indent'
 "Color scheme plugins
 Plugin 'morhetz/gruvbox'
 Plugin 'lsdr/monokai'
@@ -112,10 +113,10 @@ Plugin 'rizzatti/dash.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on    " required
+filetype plugin on    " required
 syntax enable
 "
-:let g:gruvbox_italic=1
+":let g:gruvbox_italic=1
 :let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 " Brief help
