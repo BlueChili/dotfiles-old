@@ -11,7 +11,7 @@ function vim
 end
 
 function md
-	mkdir $argv
+	mkdir -p $argv
 end
 
 function mtr
