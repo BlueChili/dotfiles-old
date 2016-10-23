@@ -16,6 +16,7 @@ call dein#add('Shougo/dein.vim')
 " Add or remove your plugins here:
 " call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('kballard/vim-swift')
+call dein#add('AndrewRadev/vim-eco')
 call dein#add('digitaltoad/vim-pug')
 call dein#add('strogonoff/vim-coffee-script') "This is the syntax only version, the full one with requiring the compiler for greater good is hosted by kchmck
 call dein#add('wavded/vim-stylus')
@@ -38,7 +39,9 @@ call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 " Required:
 call dein#end()
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" option deprecated
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 " Required:
 filetype plugin indent on
 
@@ -55,12 +58,19 @@ set noswapfile
 let mapleader = ","
 "
 " Keymappings
+map <leader>w <C-w><C-w>
+nmap <leader>w <C-w><C-w>
+imap <leader>w <ESC><C-w><C-w>
 map <leader>s :w<CR>
 nmap <leader>s :w<CR>
 imap <leader>s <ESC>:w<CR>
+map <leader>qa :qa<CR>
+nmap <leader>qa :qa<CR>
+imap <leader>qa <ESC>:qa<CR>
 map <leader>qq :q<CR>
 nmap <leader>qq :q<CR>
 imap <leader>qq <ESC>:q<CR>
+tnoremap <leader>w <C-\><C-n><C-w><C-w>
 tnoremap <leader><ESC> <C-\><C-n>
 tnoremap <leader>qq <C-\><C-n>:q<CR>
 tnoremap <leader>h <C-\><C-n><C-w>h
@@ -158,12 +168,15 @@ set relativenumber
 " Automatic linting on file save
 "au BufWritePost * Neomake
 
+" let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard']
+" let g:ctrlp_user_command = ['.git', 'cd %s; and git ls-files -co --exclude-standard']
+let g:ctrlp_user_command = ['.git .meteor', 'cd %s; and git ls-files -co --exclude-standard']
 " let CtrlP know that files and paths in .gitignore should be ignored from search
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/meteor/*,*/bower_components/*,*.css.map,*.js.map
-let g:ctrlp_match_window='bottom,order:ttb'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/meteor/*,*/bower_components/*,*.css.map,*.js.map,*/out/*
+set wildignore+=*/public/*
+let g:ctrlp_match_window='bottom'
+" let g:ctrlp_match_window='bottom,order:ttb'
 
-"let g:ctrlp_user_command = ['.git', 'git ls-files -co --exclude-standard']
-let g:ctrlp_user_command = ['.git', 'cd %s; and git ls-files -co --exclude-standard']
 
 " HTML file config
 augroup configgroup

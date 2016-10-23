@@ -17,3 +17,19 @@ end
 function mtr
 	meteor $argv
 end
+
+function ghci
+  stack ghci $argv
+end
+
+function gst
+  git st $argv
+end
+
+function gcm
+  git cm $argv
+end
+
+function gcko
+  git checkout $argv
+end
