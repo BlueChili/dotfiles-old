@@ -14,7 +14,6 @@ call dein#begin(expand('~/.config/nvim/bundle'))
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-" call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('kballard/vim-swift')
 call dein#add('AndrewRadev/vim-eco')
 call dein#add('digitaltoad/vim-pug')
@@ -22,34 +21,44 @@ call dein#add('strogonoff/vim-coffee-script') "This is the syntax only version, 
 call dein#add('wavded/vim-stylus')
 call dein#add('Yggdroot/indentLine')
 call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
 call dein#add('morhetz/gruvbox')
-call dein#add('Lokaltog/vim-powerline')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('rizzatti/dash.vim')
 call dein#add('scrooloose/syntastic')
 call dein#add('lsdr/monokai')
 call dein#add('tpope/vim-fugitive')
-call dein#add('vim-scripts/HTML-AutoCloseTag')		"Auto closes html tags after '>'
+" call dein#add('vim-scripts/HTML-AutoCloseTag')		"Auto closes html tags after '>'
 call dein#add('vim-scripts/tComment')							"Easily comment with 'gcc'
+call dein#add('othree/yajs.vim')                  "JavaScript syntax
+call dein#add('othree/javascript-libraries-syntax.vim')                  " syntax fro libraries ex. React
+call dein#add('mattn/emmet-vim')
+call dein#add('cespare/vim-toml')
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-repeat')
+call dein#add('mhartington/oceanic-next')
 
 " You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+" call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 " Required:
 call dein#end()
 
-" option deprecated
-"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
+"incremental live substitute
+set inccommand=split
 " Required:
 filetype plugin indent on
 
+let g:used_javascript_libs = 'underscore,react'
 " If you want to install not installed plugins on startup.
 "if dein#check_install()
   "call dein#install()
 "endif
 "End dein Scripts-------------------------
+let g:user_emmet_leader_key='<leader>e'
 
 " Configuration file for vim "
 "
@@ -157,9 +166,19 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " Gruvbox theme configuration
 let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark="light"
-colorscheme gruvbox
+let g:gruvbox_vert_split="aqua"
+let g:gruvbox_italicize_strings=1
+let g:gruvbox_contrast_dark="hard"
 set background=dark "setting gruvbox dark variant
+
+" Current theme config
+
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts = 1
 
 "Indent guides plugin config
 set list lcs=tab:\·\ 
