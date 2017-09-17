@@ -38,6 +38,7 @@ call dein#add('mattn/emmet-vim')
 call dein#add('cespare/vim-toml')
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-repeat')
+call dein#add('jiangmiao/auto-pairs')
 call dein#add('mhartington/oceanic-next')
 
 " You can specify revision/branch/tag.
