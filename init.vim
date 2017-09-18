@@ -99,6 +99,7 @@ map <leader>gcm :Gcommit<CR>
 " vmap <leader>/ :norm 0i//<ESC>
 " vmap <leader>? :norm 02x<ESC>
 " Plugin & Third-Party apps dependent keymappings
+nnoremap <F5> :UndotreeToggle<cr>
 nmap <leader>d :Dash<CR>
 imap <leader>p <ESC>:CtrlP<CR>
 nmap <leader>p <ESC>:CtrlP<CR>
