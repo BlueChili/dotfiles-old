@@ -14,11 +14,11 @@ call dein#begin(expand('~/.config/nvim/bundle'))
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('kballard/vim-swift')
-call dein#add('AndrewRadev/vim-eco')
-call dein#add('digitaltoad/vim-pug')
-call dein#add('strogonoff/vim-coffee-script') "This is the syntax only version, the full one with requiring the compiler for greater good is hosted by kchmck
-call dein#add('wavded/vim-stylus')
+call dein#add('kballard/vim-swift', {'on_ft': 'swift'})
+call dein#add('AndrewRadev/vim-eco', {'on_ft': 'eco'})
+call dein#add('digitaltoad/vim-pug', { 'on_ft': ['pug', 'jade'] })
+call dein#add('strogonoff/vim-coffee-script', { 'on_ft': 'coffee' }) "This is the syntax only version, the full one with requiring the compiler for greater good is hosted by kchmck
+call dein#add('wavded/vim-stylus', {'on_ft': ['stylus', 'styl']})
 call dein#add('Yggdroot/indentLine')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('morhetz/gruvbox')
@@ -28,7 +28,7 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('rizzatti/dash.vim')
 call dein#add('scrooloose/syntastic')
-call dein#add('lsdr/monokai')
+" call dein#add('lsdr/monokai')
 call dein#add('tpope/vim-fugitive')
 " call dein#add('vim-scripts/HTML-AutoCloseTag')		"Auto closes html tags after '>'
 call dein#add('vim-scripts/tComment')							"Easily comment with 'gcc'
@@ -40,7 +40,7 @@ call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-repeat')
 call dein#add('jiangmiao/auto-pairs')
 call dein#add('mhartington/oceanic-next')
-
+call dein#add('mbbill/undotree')
 " You can specify revision/branch/tag.
 " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -184,6 +184,7 @@ let g:airline_powerline_fonts = 1
 "Indent guides plugin config
 set list lcs=tab:\·\ 
 set relativenumber
+set scrolloff=1
 
 " Automatic linting on file save
 "au BufWritePost * Neomake
