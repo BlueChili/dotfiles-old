@@ -106,6 +106,7 @@ nmap <leader>p <ESC>:CtrlP<CR>
 imap <leader>fp <ESC>:CtrlPClearCache<CR>
 nmap <leader>fp <ESC>:CtrlPClearCache<CR>
 let g:ctrlp_map = '<leader>p'
+nmap <leader><leader><leader>v :e $MYVIMRC<CR>
 "
 "wheelies 
 no <up> ddkP
