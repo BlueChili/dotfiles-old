@@ -27,13 +27,14 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('rizzatti/dash.vim')
-call dein#add('scrooloose/syntastic')
+call dein#add('w0rp/ale')
 " call dein#add('lsdr/monokai')
 call dein#add('tpope/vim-fugitive')
 " call dein#add('vim-scripts/HTML-AutoCloseTag')		"Auto closes html tags after '>'
 call dein#add('vim-scripts/tComment')							"Easily comment with 'gcc'
 call dein#add('othree/yajs.vim')                  "JavaScript syntax
-call dein#add('othree/javascript-libraries-syntax.vim')                  " syntax fro libraries ex. React
+call dein#add('othree/es.next.syntax.vim')
+call dein#add('othree/javascript-libraries-syntax.vim')                  " syntax for libraries ex. React
 call dein#add('mattn/emmet-vim')
 call dein#add('cespare/vim-toml')
 call dein#add('tpope/vim-surround')
@@ -41,11 +42,14 @@ call dein#add('tpope/vim-repeat')
 call dein#add('jiangmiao/auto-pairs')
 call dein#add('mhartington/oceanic-next')
 call dein#add('mbbill/undotree')
+"call dein#add('gorodinskiy/vim-coloresque')
 " You can specify revision/branch/tag.
 " call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 " Required:
 call dein#end()
+
+set undofile
 
 set termguicolors
 "incremental live substitute
@@ -53,7 +57,7 @@ set inccommand=split
 " Required:
 filetype plugin indent on
 
-let g:used_javascript_libs = 'underscore,react'
+let g:used_javascript_libs = 'underscore,react,chai,jquery'
 " If you want to install not installed plugins on startup.
 "if dein#check_install()
   "call dein#install()
@@ -95,6 +99,7 @@ nnoremap <leader>l <C-w>l
 " git-fugitive mappings
 map <leader>gst :Gstatus<CR>
 map <leader>gcm :Gcommit<CR>
+map <leader>gpu :Gpush<CR>
 " Depredated in favor of the tComment plugin
 " vmap <leader>/ :norm 0i//<ESC>
 " vmap <leader>? :norm 02x<ESC>
@@ -106,7 +111,7 @@ nmap <leader>p <ESC>:CtrlP<CR>
 imap <leader>fp <ESC>:CtrlPClearCache<CR>
 nmap <leader>fp <ESC>:CtrlPClearCache<CR>
 let g:ctrlp_map = '<leader>p'
-nmap <leader><leader><leader>v :e $MYVIMRC<CR>
+nmap <leader><leader>v :e $MYVIMRC<CR>
 "
 "wheelies 
 no <up> ddkP
@@ -123,20 +128,20 @@ vno <left> <Nop>
 vno <right> <Nop>
 
 " I suck at typing!!!!!
-iabbr htpp http
-iabbr flase false
-iabbr ture true
-iabbr tuer true
-iabbr fucntion function
+iabbrev htpp http
+iabbrev flase false
+iabbrev ture true
+iabbrev tuer true
+iabbrev fucntion function
 " DOM abreviations
-iabbr csl console.log
-iabbr dmt document
-iabbr qs querySelector
-iabbr qsa querySelectorAll
-iabbr ael addEventListener
-iabbr gebi getElementById
-iabbr gebt getElementsByTagName
-iabbr gebc getElementsByClassName
+iabbrev csl console.log(
+iabbrev dmt document
+iabbrev qs querySelector(
+iabbrev qsa querySelectorAll(
+iabbrev ael addEventListener(
+iabbrev gebi getElementById(
+iabbrev gebt getElementsByTagName(
+iabbrev gebc getElementsByClassName(
 
 set mouse=nv
 set modelines=0		" CVE-2007-2438
@@ -171,15 +176,17 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 let g:gruvbox_italic=1
 let g:gruvbox_vert_split="aqua"
 let g:gruvbox_italicize_strings=1
+let g:gruvbox_contrast_light="medium"
 let g:gruvbox_contrast_dark="hard"
-set background=dark "setting gruvbox dark variant
+" set background=dark "setting gruvbox dark variant
 
 " Current theme config
-
+" let g:ale_lint_delay = 500    " left here to use after battery replacement
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-" colorscheme OceanicNext
-colorscheme gruvbox
+" colorscheme OceanicNextLight
+colorscheme OceanicNext
+" colorscheme gruvbox
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 
