@@ -82,6 +82,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"i
+
+alias lal="ls -al"
+alias ll="ls -l"
 eval "$(rbenv init -)"
 
 # auto completion for:
