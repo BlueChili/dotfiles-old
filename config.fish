@@ -1,5 +1,10 @@
 if status --is-login
 	eval (docker-machine env)
+  set -x TRITON_CLOUD_USER_NAME bluechili
+  set -x MANTA_URL https://us-east.manta.joyent.com
+  set -x MANTA_USER $TRITON_CLOUD_USER_NAME
+  set -e MANTA_SUBUSER
+  set -x MANTA_KEY_ID (ssh-keygen -l -f $HOME/.ssh/bluechili-at-joyent.pub | awk '{print $2}')
 end
 
 function sdc-docker
@@ -69,4 +74,5 @@ function dknetshow
   docker network inspect $argv
 end
 
+set -x PATH $PATH /usr/local/Cellar/python3/3.6.4_1/bin ~/.cargo/bin
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
