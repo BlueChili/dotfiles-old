@@ -1,0 +1,11 @@
+.favorite-templates {
+  width: auto !important;
+}
+
+.jb-chat-body .col-xs-4 {
+  width: 100vw;
+}
+
+#ifc-1856 , .iflychat-embed {
+  height: 700px;
+}
