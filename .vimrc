@@ -1,4 +1,6 @@
-set nocompatible               " Be iMproved
+" set nocompatible               " Be iMproved
+syntax on
+
 
 packadd minpac
 call minpac#init()
@@ -16,7 +18,7 @@ call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('rizzatti/dash.vim')
 call minpac#add('w0rp/ale')
 " call minpac#add('lsdr/monokai')
-" call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-fugitive')
 " call minpac#add('vim-scripts/HTML-AutoCloseTag')		"Auto closes html tags after '>'
 call minpac#add('vim-scripts/tComment')							"Easily comment with 'gcc'
 call minpac#add('othree/yajs.vim')                  "JavaScript syntax
@@ -34,6 +36,7 @@ call minpac#add('mbbill/undotree')
 call minpac#add('arcticicestudio/nord-vim')
 call minpac#add('igankevich/mesonic', {'type': 'opt', 'name': 'meson'})
 call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('elmcast/elm-vim')
 
 " You can specify revision/branch/tag.
 " call minpac#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -182,7 +185,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'
 
 "Indent guides plugin config
-set list lcs=tab:\·\ 
+set listchars=eol:\*,tab:\|\ 
 set relativenumber
 set scrolloff=1
 

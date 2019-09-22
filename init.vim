@@ -15,9 +15,9 @@ call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
 call dein#add('kballard/vim-swift', {'on_ft': 'swift'})
-call dein#add('AndrewRadev/vim-eco', {'on_ft': 'eco'})
+" call dein#add('AndrewRadev/vim-eco', {'on_ft': 'eco'})
 call dein#add('digitaltoad/vim-pug', { 'on_ft': ['pug', 'jade'] })
-call dein#add('strogonoff/vim-coffee-script', { 'on_ft': 'coffee' }) "This is the syntax only version, the full one with requiring the compiler for greater good is hosted by kchmck
+" call dein#add('strogonoff/vim-coffee-script', { 'on_ft': 'coffee' }) "This is the syntax only version, the full one with requiring the compiler for greater good is hosted by kchmck
 call dein#add('wavded/vim-stylus', {'on_ft': ['stylus', 'styl']})
 call dein#add('Yggdroot/indentLine')
 " call dein#add('Shougo/neosnippet.vim')
@@ -29,7 +29,7 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('rizzatti/dash.vim')
 call dein#add('w0rp/ale')
 " call dein#add('lsdr/monokai')
-" call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-fugitive')
 " call dein#add('vim-scripts/HTML-AutoCloseTag')		"Auto closes html tags after '>'
 call dein#add('vim-scripts/tComment')							"Easily comment with 'gcc'
 call dein#add('othree/yajs.vim')                  "JavaScript syntax
@@ -135,20 +135,24 @@ vno <left> <Nop>
 vno <right> <Nop>
 
 " I suck at typing!!!!!
+iabbrev ;ef; uso de FUERZA EXCESIVA
+iabbrev ;ups; DETENCIÓN POLICIAL ILEGAL
 iabbrev htpp http
 iabbrev flase false
 iabbrev ture true
 iabbrev tuer true
 iabbrev fucntion function
 " DOM abreviations
-iabbrev csl console.log(
+iabbrev csl console.log()<Left>
 iabbrev dmt document
-iabbrev qs querySelector(
-iabbrev qsa querySelectorAll(
-iabbrev ael addEventListener(
-iabbrev gebi getElementById(
-iabbrev gebt getElementsByTagName(
-iabbrev gebc getElementsByClassName(
+iabbrev qs querySelector()<Left>
+iabbrev qsa querySelectorAll()<Left>
+iabbrev ael addEventListener()<Left>
+iabbrev gebi getElementById()<Left>
+iabbrev gebt getElementsByTagName()<Left>
+iabbrev gebc getElementsByClassName()<Left>
+iabbrev mqmiw @media all and (min-width:)<Left>
+iabbrev mqmaw @media all and (max-width:)<Left>
 
 set mouse=nv
 set modelines=0		" CVE-2007-2438
@@ -194,8 +198,9 @@ let g:oceanic_next_terminal_italic = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_comment_brightness = 15
+colorscheme OceanicNext
 " colorscheme OceanicNextLight
-colorscheme nord
+" colorscheme nord
 " colorscheme gruvbox
 let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'

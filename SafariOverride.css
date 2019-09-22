@@ -9,3 +9,26 @@
 #ifc-1856 , .iflychat-embed {
   height: 700px;
 }
+
+#defchat {
+  display: flex;
+  flex-direction: column;
+}
+
+#main .content .ad {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#main .content .c-1 {
+  box-sizing: border-box;
+  width: calc(100% - 13px);
+}
+
+
+/* For Wikipedia */
+#content.mw-body{
+  max-width: 40em;
+  font-size: 18px;
+}

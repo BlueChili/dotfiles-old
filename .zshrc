@@ -5,7 +5,7 @@ export ZSH=/Users/BlueChili/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="gentoo"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +49,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx colored-man colorize chucknorris)
+plugins=(git osx colored-man colorize)
 
 # User configuration
 
@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias lal="ls -al"
 alias ll="ls -l"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # auto completion for:
 # tmux
@@ -93,5 +93,13 @@ eval "$(rbenv init -)"
 
 export EDITOR="vim"
 #exec fortune -a /Users/BlueChili/.oh-my-zsh/plugins/chucknorris/fortunes | cowthink
-exec fortune | cowthink
+# exec fortune | cowthink
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Edit command lined inside vim
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
