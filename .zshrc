@@ -53,7 +53,7 @@ plugins=(git osx colored-man colorize)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/Applications/ghc-7.10.2.app/Contents/bin:/Users/BlueChili/Developer/express-guide/mongo/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -98,8 +98,11 @@ export EDITOR="vim"
 
 # Vi mode
 bindkey -v
-export KEYTIMEOUT=1
+# export KEYTIMEOUT=1
 
 # Edit command lined inside vim
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+# autoload edit-command-line; zle -N edit-command-line
+# bindkey '^e' edit-command-line
+alias m001='mongo "mongodb://cluster0-shard-00-00-jxeqq.mongodb.net:27017,cluster0-shard-00-01-jxeqq.mongodb.net:27017,cluster0-shard-00-02-jxeqq.mongodb.net:27017/test?replicaSet=Cluster0-shard-0" --authenticationDatabase admin --ssl --username m001-student --password m001-mongodb-basics'
+alias atlassandbox='mongo "mongodb+srv://sandbox-rdd0u.mongodb.net/test"  --username m001-student --password m001-mongodb-basics'
+alias obs='/Applications/OBS.app/Contents/MacOS/OBS'
