@@ -5,7 +5,7 @@ export ZSH=/Users/BlueChili/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gentoo"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,11 +49,11 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx colored-man colorize)
+plugins=(git docker git-prompt)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/Applications/ghc-7.10.2.app/Contents/bin:/Users/BlueChili/Developer/express-guide/mongo/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -94,7 +94,7 @@ alias ll="ls -l"
 export EDITOR="vim"
 #exec fortune -a /Users/BlueChili/.oh-my-zsh/plugins/chucknorris/fortunes | cowthink
 # exec fortune | cowthink
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Vi mode
 bindkey -v
@@ -103,3 +103,5 @@ export KEYTIMEOUT=1
 # Edit command lined inside vim
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+
+export PROMPT='%F{green}%2~ %F{blue}$ %f'
