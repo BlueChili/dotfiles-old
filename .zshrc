@@ -104,4 +104,4 @@ export KEYTIMEOUT=1
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-export PROMPT='%F{green}%2~ %F{blue}$ %f'
+export PROMPT='%F{green}%2~ %F{red}%(?..%? )%F{blue}$ %f'
