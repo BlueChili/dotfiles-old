@@ -1,5 +1,7 @@
+export ZDOTDIR='.config/zsh'
+source $ZDOTDIR/.zshrc
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/BlueChili/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -105,3 +107,4 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 export PROMPT='%F{green}%2~ %F{red}%(?..%? )%F{blue}$ %f'
+export TERM=xterm-256color

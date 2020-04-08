@@ -1,5 +1,30 @@
+env:
+  TERM: xterm-256color
+
 font:
-  size: 14
+  size: 10
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+url:
+  modifiers: Super
+
+live_config_reload: true
+
+window:
+  startup_mode: Fullscreen
+
+draw_bold_text_with_bright_colors: true
+
+key_bindings:
+  - { key: V, mods: Super, action: Paste }
+  - { key: C, mods: Super, action: Copy }
+  - { key: F, mods: Super, action: ToggleFullscreen }
+  - { key: Equals, mods: Super, action: IncreaseFontSize }
+  - { key: Subtract, mods: Super, action: DecreaseFontSize }
 
 schemes:
   cobalt: &cobalt
